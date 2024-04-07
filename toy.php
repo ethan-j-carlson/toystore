@@ -7,33 +7,12 @@
 	//		i.e., ../toy.php?toynum=0001
 	$toy_id = $_GET['toynum'];
 
-
-	/*
-	 * TO-DO: Define a function that retrieves ALL toy and manufacturer info from the database based on the toynum parameter from the URL query string.
-	 		  - Write SQL query to retrieve ALL toy and manufacturer info based on toynum
-	 		  - Execute the SQL query using the pdo function and fetch the result
-	 		  - Return the toy info
-
-	 		  Retrieve info about toy from the db using provided PDO connection
-	 */
-
-	/*
-	 * Retrieve toy information from the database based on the toy ID.
-	 * 
-	 * @param PDO $pdo       An instance of the PDO class.
-	 * @return array|null    An associative array containing the toy information, or null if no toy is found.
-	 */
 	function toy_info(PDO $pdo, string $id) {
-
-		// SQL query to retrieve toy information based on the toy ID
 		$sql = "SELECT * 
 			FROM toy, manuf
 			WHERE toynum = :id
-			AND toy.manid = manuf.manid;";	// :id is a placeholder for value provided later 
-		                               // It's a parameterized query that helps prevent SQL injection attacks and ensures safer interaction with the database.
-		// Execute the SQL query using the pdo function and fetch the result
-		$toy = pdo($pdo, $sql, ['id' => $id])->fetch();		// Associative array where 'id' is the key and $id is the value. Used to bind the value of $id to the placeholder :id in  SQL query.
-		// Return the toy information (associative array)
+			AND toy.manid = manuf.manid;";
+		$toy = pdo($pdo, $sql, ['id' => $id])->fetch();
 		return $toy;
 	}
 
@@ -78,10 +57,6 @@
 		</header>
 
 		<main>
-			<!-- 
-			  -- TO DO: Fill in ALL the placeholders for this toy from the db
-  			  -->
-			
 			<div class="toy-details-container">
 				<div class="toy-image">
 					<!-- Display image of toy with its name as alt text -->
