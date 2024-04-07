@@ -10,7 +10,7 @@
 	 * @param string $id     The ID of the toy to retrieve.
 	 * @return array|null    An associative array containing the toy information, or null if no toy is found.
 	 */
-	function get_toy(PDO $pdo, string $id) {
+	function getToy(PDO $pdo, string $id) {
 
 		// SQL query to retrieve toy information based on the toy ID
 		$sql = "SELECT * 
@@ -28,7 +28,7 @@
 
 	$toys = [];
 	for ($i = 1; $i <= 10; $i++){
-		$toys[$i - 1] = get_toy($pdo, str_pad(strval($i),4,'0',STR_PAD_LEFT));
+		$toys[$i - 1] = getToy($pdo, str_pad(strval($i),4,'0',STR_PAD_LEFT));
 	}	
 // Closing PHP tag  ?> 
 
