@@ -73,7 +73,7 @@
 
   				<div class="toy-card">
   					<!-- Create a hyperlink to toy.php page with toy number as parameter -->
-  					<a href="toy.php?toynum=<?= $toys[0]['toynum'] ?>">
+  					<a href="toy.php?toynum=<?= '0002' ?>">
 
   						<!-- Display image of toy with its name as alt text -->
   						<img src="<?= $toys[0]['imgSrc'] ?>" alt="<?= $toys[0]['name'] ?>">
@@ -85,13 +85,15 @@
   					<!-- Display price of toy -->
   					<p>$<?= $toys[0]['price'] ?></p>
   				</div>
+
   				<div class="toy-card">
-  					<a href="toy.php?toynum=<?= $toys[1]['toynum'] ?>">
+					<a href="toy.php?toynum=<?= $toys[1]['toynum'] ?>">
   						<img src="<?= $toys[1]['imgSrc'] ?>" alt="<?= $toys[1]['name'] ?>">
   					</a>
   					<h2><?= $toys[1]['name'] ?></h2>
   					<p>$<?= $toys[1]['price'] ?></p>
   				</div>
+
   				<div class="toy-card">
   					<a href="toy.php?toynum=<?= $toys[2]['toynum'] ?>">
   						<img src="<?= $toys[2]['imgSrc'] ?>" alt="<?= $toys[2]['name'] ?>">
