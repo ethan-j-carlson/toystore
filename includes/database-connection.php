@@ -6,7 +6,7 @@ $db       = 'ethancar_toystore';     // Name of the database
 $port     = '3306';                           // Port is usually 3306 in Hostgator
 $charset  = 'utf8mb4';                       // UTF-8 encoding using 4 bytes of data per char
 
-$username = 'me';     // Enter YOUR cPanel username and user here
+$username = 'ethancar_me';     // Enter YOUR cPanel username and user here
 $password = 'Temp_Password123';           // Enter YOUR user password here
 
 
