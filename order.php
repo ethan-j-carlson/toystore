@@ -81,17 +81,8 @@
 						<button type="submit">Lookup Order</button>
 					</form>
 				</div>
-				
-				<!-- 
-				  -- TO-DO: Check if variable holding order is not empty. Make sure to replace null with your variable!
-				  -->
-				
 				<?php if (!empty($order)) {?>
 					<div class="order-details">
-
-						<!-- 
-				  		  -- TO DO: Fill in ALL the placeholders for this order from the db
-  						  -->
 						<h1>Order Details</h1>
 						<p><strong>Name: </strong> <?= $order['cname'] ?></p>
 				        	<p><strong>Username: </strong> <?= $order['username'] ?></p>
