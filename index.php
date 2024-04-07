@@ -73,7 +73,7 @@
 
   				<div class="toy-card">
   					<!-- Create a hyperlink to toy.php page with toy number as parameter -->
-  					<a href="toy.php?toynum=<?= '0002' ?>">
+  					<a href="toy.php?toynum=<?= $toys[0]['toynum'] ?>">
 
   						<!-- Display image of toy with its name as alt text -->
   						<img src="<?= $toys[0]['imgSrc'] ?>" alt="<?= $toys[0]['name'] ?>">
